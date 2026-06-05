@@ -13,7 +13,7 @@ connectDB()
 app.use(cors({
   origin: [
     process.env.CLIENT_URL || 'http://localhost:5173',
-    'http://localhost:4173',  // vite preview
+    'https://transport-invoice-pbkp8748f-rahul-goyal-s-projects.vercel.app',  // vite preview
   ],
   methods: ['GET','POST','PUT','PATCH','DELETE'],
   credentials: true,
