@@ -297,7 +297,7 @@ export default function InvoicePage() {
 
   const getHTML = async () => {
     let logoB64 = null
-    try { logoB64 = await imgToBase64('/src/assets/logo1.png') } catch {}
+    try { logoB64 = await imgToBase64('/public/logo.png') } catch {}
     return buildInvoiceHTML({ billNo:billNo.trim(), date:billDate, customer, entries:selected, gstRate:18 }, logoB64)
   }
 
