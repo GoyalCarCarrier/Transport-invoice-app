@@ -11,11 +11,18 @@ const app = express()
 connectDB()
 
 app.use(cors({
-  origin: [
-    process.env.CLIENT_URL || 'http://localhost:5173',
-    'https://transport-invoice-pbkp8748f-rahul-goyal-s-projects.vercel.app',  // vite preview
-  ],
-  methods: ['GET','POST','PUT','PATCH','DELETE'],
+  origin: function(origin, callback) {
+    if (
+      !origin ||
+      origin.includes('localhost') ||
+      origin.includes('vercel.app')
+    ) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   credentials: true,
 }))
 app.use(express.json({ limit: '10mb' }))
