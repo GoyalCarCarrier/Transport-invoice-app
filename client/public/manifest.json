@@ -1,0 +1,18 @@
+{
+  "name": "TransInvoice Management System",
+  "short_name": "TransInvoice",
+  "description": "Transport Invoice Management System",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
