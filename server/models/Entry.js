@@ -7,7 +7,8 @@ const entrySchema = new mongoose.Schema({
   from: { type: String, required: true, trim: true },
   to: { type: String, required: true, trim: true },
   pickupDate: { type: Date, required: true },
-  dropDate: { type: Date, required: true },
+   dropDate:   { type: Date, default: null },
+   delivered: { type: Boolean, default: false },
   freight: { type: Number, required: true, min: 0 },
   invoiceId: { type: mongoose.Schema.Types.ObjectId, ref: 'Invoice', default: null },
 }, { timestamps: true })
