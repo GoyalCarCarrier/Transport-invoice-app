@@ -34,7 +34,7 @@ const CO = {
 
 function getLogoBase64() {
   const paths = [
-    path.resolve(__dirname,'../../client/public/logo.png'),
+    path.resolve(__dirname,'/logo.png'),
   ]
   for (const p of paths) {
     if (fs.existsSync(p)) return 'data:image/png;base64,'+fs.readFileSync(p).toString('base64')
